@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/553722128b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="view/assets/css/index.css">
-    <script type="text/javascript" src="view/assets/javascript/index.js" defer></script>
+    <script type="text/javascript" src="./assets/javascript/barraNavegacao.js" defer></script>
     <title>Página Inicial</title>
 </head>
 
