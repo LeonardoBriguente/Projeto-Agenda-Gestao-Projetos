@@ -7,35 +7,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/553722128b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="./assets/css/agenda.css">
-    <script type="text/javascript" src="./assets/javascript/barraNavegacao.js" defer></script>
     <script type="text/javascript" src="./assets/javascript/agenda.js" defer></script>
     <title>Página Inicial</title>
 </head>
 
 <body>
-    <header class="header">
-        <div class="logo-bar">
-            <i id="hamburguer" class="fa-solid fa-bars"></i>
+    <?php require "header.php"; ?>
 
-            <h2 class="title" style="justify-self: center;"><a href="./homePage.php" id="title">Stima Studio Beauty</a></h2>
-
-        </div>
-
-
-        <nav class="navbar">
-
-            <div class="sidebar">
-                <ul class="menu">
-                    <!-- IDEIA: Colocar icons -->
-                    <li class="topico"><a class="link" href="./homePage.php">Agenda</a></li>
-                    <li class="topico"><a href="#">Perfil</a></li>
-                    <li class="topico"><a href="#">Clientes</a></li>
-                    <li class="topico"><a href="#">Finaceiro</a></li>
-                </ul>
-            </div>
-
-        </nav>
-    </header>
 
     <main class="calendar-conteiner">
         <section class="controll-calendar">

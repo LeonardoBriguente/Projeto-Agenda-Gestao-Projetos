@@ -17,7 +17,7 @@
             <!-- IDEIA: Fazer um hambumber animado ao clicar. -->
             <i id="hamburguer" class="fa-solid fa-bars"></i>
 
-            <h2 class="title" style="justify-self: center;"><a href="./homePage.php" id="title">Stima Studio Beauty</a></h2>
+            <h2 class="title" style="justify-self: center;"><a href="index.php" id="title">Stima Studio Beauty</a></h2>
 
         </div>
 
