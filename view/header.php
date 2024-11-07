@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/553722128b.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="assets/css/header.css">
-    <script type="text/javascript" src="./assets/javascript/header.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="/projetogp/view/assets/css/header.css">
+    <script type="text/javascript" src="/projetogp/view/assets/javascript/header.js" defer></script>
     <title>Header</title>
 </head>
 <body>
