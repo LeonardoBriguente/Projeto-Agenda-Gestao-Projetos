@@ -14,7 +14,6 @@
 <body>
     <header class="header">
         <div class="logo-bar">
-            <!-- IDEIA: Fazer um hambumber animado ao clicar. -->
             <i id="hamburguer" class="fa-solid fa-bars"></i>
 
             <h2 class="title" style="justify-self: center;"><a href="./homePage.php" id="title">Stima Studio Beauty</a></h2>
@@ -23,7 +22,6 @@
 
 
         <nav class="navbar">
-            <!-- IDEIA: Barra lateral esquerda que se sobrepõe a agenda-->
 
             <div class="sidebar">
                 <ul class="menu">
@@ -35,7 +33,6 @@
                 </ul>
             </div>
 
-            <!-- TESTE DE REFERENCIAMENTO DO  -->
         </nav>
     </header>
 
