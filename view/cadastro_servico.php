@@ -10,9 +10,9 @@
 </head>
 
 <body>
-    <?php require "view/header.php"; ?>
+    <?php require "header.php"; ?>
 
-        <h1>TELA BASE DO SISTEMA</h1>
+    
 </body>
 
 </html>
