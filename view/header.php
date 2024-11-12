@@ -24,7 +24,7 @@
             <div class="sidebar">
                 <ul class="menu">
                     <!-- IDEIA: Colocar icons -->
-                    <li class="topico"><a class="link" href="/view/agenda.php">Agenda</a></li>
+                    <li class="topico"><a class="link" href="view/agenda.php">Agenda</a></li>
                     <li class="topico"><a href="#">Perfil</a></li>
                     <li class="topico"><a href="#">Clientes</a></li>
                     <li class="topico"><a href="#">Finaceiro</a></li>
