@@ -24,6 +24,10 @@ section.calendar {
     flex-direction: column;  /* Colocando o título no topo */
 }
 
+section.controll-calendar{
+    display: flex;
+}
+
 #calendar {
     width: 100%;
     height: 100%;
@@ -53,6 +57,9 @@ th {
 td {
     cursor: pointer;
     font-size: 1.2rem;
+    position: relative;  /* Necessário para posicionar elementos dentro do td */
+    vertical-align: top;  /* Garante que o conteúdo se alinhe ao topo */
+    padding: 10px;
 }
 
 td:hover {
@@ -69,18 +76,17 @@ td.current-day {
     font-weight: bold;
 }
 
-button {
-    padding: 10px 15px;
-    margin: 10px;
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+/* Estilização do número do dia */
+.day-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;  /* Espaço entre o número e a área dos agendamentos */
 }
 
-button:hover {
-    background-color: var(--second-color);
+/* Área dos agendamentos */
+.agenda-container {
+    margin-top: 5px;
+    min-height: 30px;  /* Definindo uma altura mínima para a área dos agendamentos */
 }
 
 /* Estilização do título do mês */
@@ -95,4 +101,18 @@ button:hover {
 th.day-name {
     background-color: var(--primary-color);
     color: white;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--second-color);
 }
