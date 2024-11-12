@@ -2,6 +2,7 @@
     --primary-color: #40956A;
     --second-color: #0D3E22;
     --faded-color: #d3d3d3;  /* Cor apagada para os dias dos outros meses */
+    --highlight-color: #FFEB3B;  /* Cor para o dia de hoje */
 }
 
 html {
@@ -63,6 +64,11 @@ td.other-month {
     color: var(--faded-color);  /* Cor apagada para os dias dos outros meses */
 }
 
+td.current-day {
+    background-color: var(--highlight-color);  /* Destaca o dia atual */
+    font-weight: bold;
+}
+
 button {
     padding: 10px 15px;
     margin: 10px;
@@ -83,4 +89,10 @@ button:hover {
     font-weight: 600;
     margin: 10px 0;
     color: var(--primary-color);
+}
+
+/* Estilização dos dias da semana */
+th.day-name {
+    background-color: var(--primary-color);
+    color: white;
 }

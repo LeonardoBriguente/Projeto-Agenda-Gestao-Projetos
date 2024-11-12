@@ -4,28 +4,26 @@ class Agenda {
         this.month = this.today.getMonth();
         this.year = this.today.getFullYear();
         this.generateCalendar(this.month, this.year);
-        this.updateMonthTitle(this.month, this.year);  // Atualiza o título do mês
+        this.updateMonthTitle(this.month, this.year);
         this.setupEventListeners();
     }
 
-    // Função para gerar o calendário
     generateCalendar(month, year) {
         const daysOfWeek = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
-        const firstDay = new Date(year, month, 1); // Primeiro dia do mês
-        const lastDay = new Date(year, month + 1, 0); // Último dia do mês
-        const numDays = lastDay.getDate(); // Número de dias no mês
+        const firstDay = new Date(year, month, 1);
+        const lastDay = new Date(year, month + 1, 0);
+        const numDays = lastDay.getDate();
 
-        // Obter o último dia do mês anterior
         const lastDayPrevMonth = new Date(year, month, 0);
         const numPrevMonthDays = lastDayPrevMonth.getDate();
 
         let calendarHTML = '<table>';
-        calendarHTML += '<tr>';
+        calendarHTML += '<thead><tr>';
         // Cabeçalho com os dias da semana
         daysOfWeek.forEach(day => {
-            calendarHTML += `<th>${day}</th>`;
+            calendarHTML += `<th class="day-name">${day}</th>`;
         });
-        calendarHTML += '</tr><tr>';
+        calendarHTML += '</tr></thead><tbody><tr>';
 
         // Preencher os dias em branco antes do primeiro dia do mês
         const startingDay = firstDay.getDay();
@@ -37,23 +35,30 @@ class Agenda {
         }
 
         // Preencher os dias do mês atual
+        let currentDay = 1;
         for (let day = 1; day <= numDays; day++) {
             if ((startingDay + day - 1) % 7 === 0 && day !== 1) {
                 calendarHTML += '</tr><tr>';
             }
-            calendarHTML += `<td>${day}</td>`;
+
+            // Verifica se o dia é o atual
+            const isCurrentDay = this.today.getDate() === day && this.today.getMonth() === month && this.today.getFullYear() === year;
+            const currentClass = isCurrentDay ? 'current-day' : ''; // Adiciona a classe se for o dia atual
+
+            calendarHTML += `<td class="${currentClass}">${day}</td>`;
         }
 
-        // Verificar se precisamos preencher os dias do próximo mês
+        // Preencher os dias do próximo mês se necessário
         const nextMonthStartDay = (startingDay + numDays) % 7;
         if (nextMonthStartDay !== 0) { // Verifica se o mês não terminou no sábado
-            for (let i = 1; nextMonthStartDay + i <= 6; i++) {
+            const daysToFillNextMonth = 7 - nextMonthStartDay;
+            for (let i = 1; i <= daysToFillNextMonth; i++) {
                 calendarHTML += `<td class="other-month">${i}</td>`;
             }
         }
 
         // Fechar a tabela
-        calendarHTML += '</tr></table>';
+        calendarHTML += '</tr></tbody></table>';
         document.getElementById('calendar').innerHTML = calendarHTML;
     }
 
