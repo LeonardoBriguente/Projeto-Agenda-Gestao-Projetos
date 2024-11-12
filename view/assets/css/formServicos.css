@@ -11,47 +11,45 @@
     flex-direction: column;
     border: 2px solid black;
     border-radius: 20px;
-    width: 40vw;
-    height: 50vh;
+    width: 90%; 
+    max-width: 600px; 
+    height: auto; 
+    padding: 20px; 
 }
 
 .box-form h1 {
     margin-top: 5vh;
     color: var(--second-color);
+    font-size: 2rem; 
 }
 
 form {
     display: flex;
     flex-direction: column;
+    width: 70%;
 }
 
-form label{
+form label {
     font-weight: bold;
-    font-size: 26px;
+    font-size: 1.5rem; 
     margin-top: 5vh;
-    width: 30w;
     color: #0D3E22;
 }
 
-form input{
-    width: 30vw;
+form input, form select {
+    width: 100%; 
     height: 4vh;
     border: 2px solid black;
     border-radius: 5px;
-}
-
-form select {
-    width: 100%;
-    height: 4vh;
-    border: 2px solid black;
-    border-radius: 5px;
-
+    margin-bottom: 2vh; 
 }
 
 .botao-enviar {
     margin: auto;
-    margin-top: 8vh;
-    width: 6vw;
+    margin-top: 5vh; 
+    margin-bottom: 6vh;
+    width: 100%; 
+    max-width: 150px; 
     height: 5vh;
     border-radius: 15px;
     border: none;
@@ -61,6 +59,21 @@ form select {
     transition: 0.4s; 
 }
 
-.botao-enviar:hover{
+.botao-enviar:hover {
     opacity: 0.5;
+}
+
+/* Media Queries para telas menores */
+@media (max-width: 600px) {
+    .box-form {
+        width: 95%; /* Ajuste para telas muito pequenas */
+    }
+
+    form label {
+        font-size: 1.2rem; /* Diminuir o tamanho da fonte */
+    }
+
+    .botao-enviar {
+        height: 6vh; /* Aumentar a altura do botão em telas pequenas */
+    }
 }
