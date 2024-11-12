@@ -1,6 +1,7 @@
 :root {
     --primary-color: #40956A;
     --second-color: #0D3E22;
+    --faded-color: #d3d3d3;  /* Cor apagada para os dias dos outros meses */
 }
 
 html {
@@ -13,11 +14,73 @@ html {
     font-family: 'Nunito', sans-serif;
 }
 
-section.calendar{
+section.calendar {
     width: 70vw;
     height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;  /* Colocando o título no topo */
+}
 
-    & #calendar{
-        width: 100%;
-    }
+#calendar {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+th, td {
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #ccc;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+td {
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+td:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+td.other-month {
+    color: var(--faded-color);  /* Cor apagada para os dias dos outros meses */
+}
+
+button {
+    padding: 10px 15px;
+    margin: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--second-color);
+}
+
+/* Estilização do título do mês */
+#month-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 10px 0;
+    color: var(--primary-color);
 }

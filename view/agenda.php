@@ -9,30 +9,30 @@
     <script type="text/javascript" src="./assets/javascript/agenda.js" defer></script>
     <link rel="stylesheet" type="text/css" href="/projetogp/view/assets/css/agenda.css">
 
-    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css' rel='stylesheet' />
-    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js'></script>
+    <!-- <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css' rel='stylesheet' />
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js'></script> -->
     <title>Página Inicial</title>
 </head>
 
 <body>
     <?php require "header.php"; ?>
 
-
     <main class="calendar-conteiner">
         <section class="controll-calendar">
             <!-- Botões de seleção do mês -->
+            <button id="prevMonth">Mês Anterior</button>
+            <h2 id="month-title"></h2>
+            <button id="nextMonth">Próximo Mês</button>
         </section>
 
         <section class="calendar">
             <div id="calendar"></div>
         </section>
-        <!-- IDEIA: Estruturar a aegdan dentro da Main, ela focara ao lado esquerdo do visor -->
     </main>
 
     <section class="diario">
-        <!-- IDEIA: Seção onde os atendimentos do dia selecionado serão exibidos com clareza -->
+        <!-- Seção para os atendimentos do dia -->
     </section>
-    <!-- Elaborar a agenda utilizando html e css para o calendário. JS pode ser usando para interação com a agenda. Estudar sobre a classe Date do JS-->
 </body>
 
 </html>
