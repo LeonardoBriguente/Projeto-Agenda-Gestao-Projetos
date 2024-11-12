@@ -1,0 +1,59 @@
+/* Todo o formulário */
+.form{ 
+    width: 90vw;
+    margin: 4vh auto;
+    text-align: center;
+    border: 3px solid #0D3E22;
+    border-radius: 20px;
+    box-shadow: 4px 4px 8px #00000033;
+}
+/* Borda da área do formulário */
+.box-form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+/* Agrupamento de vários "inputs e labels" */
+.form-group{
+    height: 40vh;
+    width: 40vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+/* Divisão para colocar mais de um elemento em um espaço único */
+.form-itens{
+    display: flex;
+    flex-direction: row;
+
+}
+/* Estilização única para cada elemento */
+.form-item{
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* Estilização do botão "Enviar" */
+.btn-send{
+    height: 3rem;
+    width: 10rem;
+    margin: 2rem;
+    color: #ffffff;
+    background-color: #40956A;
+    border: none;
+    border-radius: 25px;
+}
+/* Estilização da Label */
+label{
+    align-self: start;
+    color: #0D3E22;
+    font-size: 25px;
+    font-weight: 600;
+}
+/* Estilização do campo Label "text/date" */
+input[type="text"], input[type="date"]{
+    height: 2rem;
+    border: 1.5px solid black;
+    border-radius: 3px;
+}
