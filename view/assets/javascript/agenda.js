@@ -1,31 +1,18 @@
-class SideBar {
+class Agenda {
     constructor() {
-        this.icon = document.querySelector("#hamburguer");
-        this.sidebar = document.querySelector(".sidebar");
-
-        this.icon.addEventListener("click", () => this.ToggleMenu());
+        this.initCalendar();
     }
 
-    static isOpen = false;
-
-    ToggleMenu() {
-        if (SideBar.isOpen) {
-            this.closeMenu();
-        } else {
-            this.openMenu();
-        }
-        SideBar.isOpen = !SideBar.isOpen;
-    }
-
-    openMenu() {
-        this.sidebar.classList.add("open");
-    }
-
-    closeMenu() {
-        this.sidebar.classList.remove("open");
+    initCalendar() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth',
+            locale: 'pt-br'
+        });
+        calendar.render();
     }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    let start = new SideBar();
+    let start = new Agenda();
 });

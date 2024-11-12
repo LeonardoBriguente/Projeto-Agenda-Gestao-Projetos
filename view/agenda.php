@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/553722128b.js" crossorigin="anonymous"></script>
-    <!-- <link rel="stylesheet" type="text/css" href="./assets/css/agenda.css"> -->
     <script type="text/javascript" src="./assets/javascript/agenda.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="/projetogp/view/assets/css/agenda.css">
+
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css' rel='stylesheet' />
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js'></script>
     <title>Página Inicial</title>
 </head>
 
@@ -19,13 +22,9 @@
         <section class="controll-calendar">
             <!-- Botões de seleção do mês -->
         </section>
-        <!-- <div class="content">
-            <h1>Conteúdo da Página</h1>
-            <p>A agenda ou qualquer outro conteúdo estará aqui. A barra lateral se sobrepõe a este conteúdo.</p>
-        </div> -->
 
         <section class="calendar">
-            <!-- Fazer o cabeçalho dp calendário e criar os elementos restantes usando JS -->
+            <div id="calendar"></div>
         </section>
         <!-- IDEIA: Estruturar a aegdan dentro da Main, ela focara ao lado esquerdo do visor -->
     </main>
