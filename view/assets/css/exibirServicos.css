@@ -1,0 +1,34 @@
+:root {
+    --primary-color: #40956A;
+    --second-color: #0D3E22;
+}
+
+.content-base {
+    display: grid;
+    grid-template-columns: repeat(4, 20vw);
+    gap: 4vw;
+    justify-content: center;
+}
+
+.content-box {
+    background-color: rgb(233, 233, 233);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.content-box h1 {
+    color: var(--second-color);
+    font-size: 25px;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+.content-box h2 {
+    border: 2px solid var(--second-color);
+    font-size: 25px;
+    border-radius: 5px;
+    width: 95%;
+    text-align: center;
+}
