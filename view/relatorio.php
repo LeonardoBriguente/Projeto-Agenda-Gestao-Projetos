@@ -86,6 +86,71 @@
                 <button onclick="buscarRelatorio()">Buscar</button>
             </div>
         </div>
+        <!-- Tabela de Relatórios -->
+        <!-- A tabela está inicialmente oculta e será exibida após o usuário clicar em "Buscar" -->
+        <div id="relatorio-section" style="display: none;">
+            <table class="report-table">
+                <thead>
+                    <tr>
+                        <th>Total</th>
+                        <th>Serviço</th>
+                        <th>Dia</th>
+                        <th>Mês</th>
+                        <th>Ano</th>
+                        <th>Valor</th>
+                    </tr>
+                </thead>
+                <tbody id="relatorio-body">
+                    <!-- Linhas de relatório serão inseridas aqui via JavaScript após a busca -->
+                </tbody>
+            </table>
+
+            <!-- Botão para Gerar PDF -->
+            <div class="pdf-button">
+                <!-- Este botão acionaria uma funcionalidade para gerar PDF (não implementada neste exemplo) -->
+                <button onclick="gerarPDF()">PDF</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Função para buscar o relatório com base nos filtros
+        function buscarRelatorio() {
+            // Obtém os valores selecionados pelo usuário
+            let atendimento = document.querySelector('input[name="atendimentos"]:checked'); // Verifica se "Realizados" ou "Cancelados" foi selecionado
+            let ano = document.getElementById('ano').value;
+            let mes = document.getElementById('mes').value;
+            let dia = document.getElementById('dia').value;
+
+            // Verifica se todos os filtros foram selecionados
+            if (atendimento && ano && mes && dia) {
+                // Exibe a seção do relatório se todos os filtros estiverem preenchidos
+                document.getElementById('relatorio-section').style.display = 'block';
+
+                // Insere uma linha de dados na tabela de relatório (exemplo de dados estáticos)
+                let tbody = document.getElementById('relatorio-body');
+                tbody.innerHTML = `
+                    <tr>
+                        <td>20</td>
+                        <td>Progressiva</td>
+                        <td>${dia}</td>
+                        <td>${mes}</td>
+                        <td>${ano}</td>
+                        <td>220</td>
+                    </tr>
+                `;
+            } else {
+                // Alerta o usuário caso algum filtro esteja faltando
+                alert("Por favor, selecione todos os filtros.");
+            }
+        }
+
+        // Função para gerar PDF - apenas um alerta neste exemplo
+        function gerarPDF() {
+            alert("Funcionalidade de PDF não implementada neste exemplo.");
+        }
+
+    </script>
 
 </body>
 </html>
