@@ -47,7 +47,7 @@
             </div>
             <div id="picture">
                 <span class="label">Colaborador</span>
-                <img id="profileImage" src="sergio.png" alt="Imagem do colaborador" width="100" height="120">
+                <img id="profileImage" src="assets/image/sergio.png" alt="Imagem do colaborador" width="100" height="120">
                 <label for="fileInput" id="update">Alterar foto</label>
                 <!-- Input escondido abaixo, lidar com na logica de upload/salvar foto (há um script no final
                     da pagina para mudar a imagem, mas precisa implementar no back-end)-->
