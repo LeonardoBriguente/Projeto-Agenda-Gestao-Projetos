@@ -1,0 +1,39 @@
+/* Toda a tabela + borda */
+.area-tabela{ 
+    width: 90vw;
+    margin: 4vh auto;
+    text-align: center;
+    border: 3px solid #0D3E22;
+    border-radius: 20px;
+    box-shadow: 4px 4px 8px #00000033;
+}
+/* Estilização da tabela */
+.tabela-exibicao{
+    width: 80vw;
+    margin: 3vh auto;
+    border: 2px solid #000000;
+}
+/* Título da tabela */
+.titulo{
+    color: #0D3E22;
+}
+/* Estilização do campo de busca (input + button) */
+.campo-busca{
+    width: 30vh;
+    margin: 0 auto;
+    border: 2px solid #000000;
+    border-radius: 8px;
+}
+/* Estilização do input de busca */
+input[type="search"]{
+    border: none;
+}
+/* Estilização do botão de enviar */
+.btn-send{
+    height: 1.5rem;
+    width: 3rem;
+    color: #000000;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 25px;
+}
