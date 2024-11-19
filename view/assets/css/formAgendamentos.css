@@ -1,0 +1,49 @@
+:root {
+    --primary-color: #40956A;
+    --second-color: #0D3E22;
+}
+
+.form-container {
+    margin: auto;
+    margin-top: 3vh;
+    border: 1px solid var(--second-color);
+    border-radius: 8px;
+    padding: 2vw;
+    width: 35vw;
+    background-color: #fff;
+}
+.form-container h1 {
+    text-align: center;
+    color: var(--primary-color)
+}
+.form-container label {
+    display: block;
+    margin: 10px 0 5px;
+}
+.form-container input,
+.form-container select,
+.form-container textarea,
+.form-container button {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.form-container button {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.form-container button:hover {
+    background-color: #256f28;
+}
+.form-container .btn-buscar {
+    background-color: #f0f0f0;
+    color: #000;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    width: auto;
+    padding: 5px 10px;
+}
