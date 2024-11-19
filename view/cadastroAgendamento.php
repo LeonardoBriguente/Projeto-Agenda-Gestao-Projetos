@@ -16,21 +16,24 @@
     <div class="form-container">
         <h1>Agendamento</h1>
         <form action="#" method="POST">
+            <button type="button" class="btn-buscar">Buscar cliente</button>
             <div class="div-grid">
-                <label for="nome">Nome</label>
-                <input type="text" id="nome" name="nome" placeholder="Informe o nome" required>
-                <button type="button" class="btn-buscar">Buscar cliente</button>
-            
-            
-                <label for="telefone">Telefone</label>
-                <input type="tel" id="telefone" name="telefone" placeholder="(xx) xxxxx-xxxx" required>
-           
-            
-                <label for="inicio">Início</label>
-                <input type="time" id="inicio" name="inicio" required>
-           
-                <label for="termino">Término</label>
-                <input type="time" id="termino" name="termino" required>
+                <div>
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="input-nome" placeholder="Informe o nome" required>
+                </div>
+                <div>
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone" name="input-telefone" placeholder="(xx) xxxxx-xxxx" required>
+                </div>
+                <div>
+                    <label for="inicio">Início</label>
+                    <input type="time" id="inicio" name="input-inicio" required>
+                </div>
+                <div>
+                    <label for="termino">Término</label>
+                    <input type="time" id="termino" name="input-termino" required>
+                </div>    
             </div>
             <div>
                 <label for="profissional">Profissional</label>
@@ -42,15 +45,16 @@
             <div>
                 <label for="servicos">Serviços</label>
                 <select id="servicos" name="servicos[]" multiple required>
-                    <option value="" disabled>Selecione o(s) serviço(s)</option>
+                    <option value="" disabled selected>Selecione o(s) serviço(s)</option>
                     <!-- Adicione as opções de serviços aqui -->
+                    <!-- Acho melhor colocar multiple required aqui, pois o agendamento pode ter mais de um tipo de serviço incluso -->
                 </select>
             </div>
             <div>
                 <label for="observacoes">Observações</label>
                 <textarea id="observacoes" name="observacoes" rows="4" placeholder="Escreva observações"></textarea>
             </div>
-            <button type="submit">Realizar agendamento</button>
+            <button class="btn-agendamento" type="submit">Realizar agendamento</button>
         </form>
     </div>
 </body>
