@@ -1,0 +1,53 @@
+/* Todo o formulário de exibição do agendamento */
+.area-agendamento{ 
+    width: 45vw;
+    margin: 4vh auto;
+    text-align: center;
+    border: 2px solid #0D3E22;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px #00000033;
+}
+/* Área do formulário de exibição */
+.form-agendamento{
+    width: 30vw;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+/* Divisão de um grupo para alinhamento */
+.grupo-agendamento{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+/* Item individual para alinhamento */
+.item-agendamento{
+    width: 14vw;
+    display: flex;
+    flex-direction: column;
+}
+/* Formatação do campo de horário */
+.output-horario{
+    text-align: center;
+}
+/* Formatação do campo de texto */
+.caixa-texto{
+    height: 5rem;
+}
+/* Título do formulário */
+.titulo{
+    color: #0D3E22;
+}
+/* Alinhamento e estilização das labels */
+label{
+    color: #0D3E22;
+    font-weight: bold;
+    text-align: start;
+}
+/* Estilização dos campos */
+input[type="text"]{
+    padding: 3px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+}
