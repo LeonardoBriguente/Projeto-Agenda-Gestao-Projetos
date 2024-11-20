@@ -29,6 +29,8 @@
     </script>
 </head>
 <body>
+    <?php require "header.php"; ?>
+
     <div class="container">
         <!-- Título do relatório -->
         <div class="title">Stima Studio Beauty - Relatórios</div>
