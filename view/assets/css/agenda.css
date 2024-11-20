@@ -5,15 +5,24 @@
     --highlight-color: #FFEB3B;  /* Cor para o dia de hoje */
 }
 
-html {
-    height: 100vh;
-}
 
 * {
     padding: 0;
     margin: 0;
     font-family: 'Nunito', sans-serif;
 }
+
+section.body{
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.conteudo-principal{
+    display: flex;
+}
+
 
 section.calendar {
     width: 70vw;
@@ -115,4 +124,10 @@ button {
 
 button:hover {
     background-color: var(--second-color);
+}
+
+
+section.diario{
+    width: 27vw;
+    border: 1px solid black;
 }
