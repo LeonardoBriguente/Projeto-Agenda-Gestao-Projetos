@@ -9,8 +9,6 @@
     <style>
         /* Estilos básicos para estrutura e layout */
         body { font-family: Arial, sans-serif; }
-        .container { width: 90%; max-width: 600px; margin: auto; padding-top: 20px; }
-        .title { text-align: center; font-size: 1.5em; background-color: #40956A; color: white; padding: 10px; }
         .filter-section { display: flex; justify-content: space-between; margin-top: 20px; }
         .filter-section div { margin-right: 10px; }
         .report-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
@@ -31,9 +29,7 @@
 <body>
     <?php require "header.php"; ?>
 
-    <div class="container">
-        <!-- Título do relatório -->
-        <div class="title">Stima Studio Beauty - Relatórios</div>
+    
 
         <!-- Seção de Filtros -->
         <div class="filter-section">
