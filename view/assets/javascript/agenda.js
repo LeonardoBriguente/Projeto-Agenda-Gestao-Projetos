@@ -20,16 +20,14 @@ class Agenda {
         let calendarHTML = '<table>';
         calendarHTML += '<thead><tr>';
         
-        // Cabeçalho com os dias da semana
         daysOfWeek.forEach(day => {
             calendarHTML += `<th class="day-name">${day}</th>`;
         });
         calendarHTML += '</tr></thead><tbody>';
     
         const startingDay = firstDay.getDay();
-        const prevMonthStartDay = numPrevMonthDays - startingDay + 1; // Dias do mês anterior
+        const prevMonthStartDay = numPrevMonthDays - startingDay + 1; 
     
-        // Preencher os dias do mês anterior
         for (let i = prevMonthStartDay; i <= numPrevMonthDays; i++) {
             calendarHTML += `<td class="other-month">
                                 <div class="day-number">${i}</div>
@@ -37,20 +35,17 @@ class Agenda {
                               </td>`;
         }
     
-        // Preencher os dias do mês atual
         for (let day = 1; day <= numDays; day++) {
             if ((startingDay + day - 1) % 7 === 0 && day !== 1) {
                 calendarHTML += '</tr><tr>';
             }
     
-            // Estrutura para cada célula do dia
             calendarHTML += `<td>
                                 <div class="day-number">${day}</div>
                                 <div class="agenda-container"></div>
                               </td>`;
         }
     
-        // Verificar se precisamos preencher os dias do próximo mês
         const nextMonthStartDay = (startingDay + numDays) % 7;
         if (nextMonthStartDay !== 0) {
             for (let i = 1; nextMonthStartDay + i <= 6; i++) {
@@ -65,20 +60,17 @@ class Agenda {
         document.getElementById('calendar').innerHTML = calendarHTML;
     }
 
-    // Função para atualizar o título do mês
     updateMonthTitle(month, year) {
         const monthNames = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
         const monthName = monthNames[month];
         document.getElementById('month-title').innerText = `${monthName} ${year}`;
     }
 
-    // Função para configurar os botões de navegação
     setupEventListeners() {
         document.getElementById("prevMonth").addEventListener("click", () => this.changeMonth(-1));
         document.getElementById("nextMonth").addEventListener("click", () => this.changeMonth(1));
     }
 
-    // Função para alterar o mês
     changeMonth(direction) {
         this.month += direction;
         if (this.month < 0) {
@@ -89,7 +81,7 @@ class Agenda {
             this.year++;
         }
         this.generateCalendar(this.month, this.year);
-        this.updateMonthTitle(this.month, this.year);  // Atualiza o título do mês
+        this.updateMonthTitle(this.month, this.year); 
     }
 }
 
