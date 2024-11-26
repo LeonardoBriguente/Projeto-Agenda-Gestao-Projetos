@@ -46,6 +46,7 @@
             </main>
 
             <section class="diario">
+                <h2>Agendamentos</h2>
                 <p>Nenhum evento registrado</p>
             </section>
         </section>
